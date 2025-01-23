@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:none;stroke:#FBB03B;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FBB03B;stroke-width:5;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#FBB03B;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:0,10.0047;}
+	.st4{fill:none;stroke:#FBB03B;stroke-width:20;stroke-miterlimit:10;stroke-dasharray:1,10;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="453.6803" y1="-143.5316" x2="1575.137" y2="1370.4349">
+	<stop  offset="0" style="stop-color:#464646"/>
+	<stop  offset="1" style="stop-color:#1A1A1A"/>
+</linearGradient>
+<rect x="-7.8" y="-5.5" class="st0" width="1935.5" height="1091.1"/>
+<circle class="st1" cx="-17.3" cy="236.2" r="648.8"/>
+<circle class="st2" cx="-17.3" cy="236.2" r="621.5"/>
+<g>
+	<circle class="st3" cx="-17.3" cy="236.2" r="587.5"/>
+</g>
+<circle class="st4" cx="-17.3" cy="236.2" r="366.5"/>
+<line class="st1" x1="-48.2" y1="501.8" x2="669.8" y2="-27.5"/>
+<line class="st1" x1="1386.7" y1="1109.2" x2="1952.1" y2="692.5"/>
+<line class="st2" x1="1400.2" y1="1127.5" x2="1965.5" y2="710.7"/>
+</svg>
