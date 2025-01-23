@@ -21,11 +21,17 @@ const submit = () => {
 </script>
 
 <template>
-    <GuestLayout>
+    <GuestLayout style="width: 100%;">
         <Head title="Register" />
-        <div class="container">
-            <form @submit.prevent="submit">
-                <div id="form">
+        
+        <form @submit.prevent="submit">
+            <img src="/img/login.png" alt="" class="img-container">
+            <div class="form-container">
+                <a href="/">
+                    <img src="/img/openai-white-logomark.png" alt="" id="logo">
+                </a>
+
+                <div  class="mt-4">
                     <InputLabel for="name" value="Name" />
 
                     <TextInput
@@ -92,7 +98,7 @@ const submit = () => {
                     />
                 </div>
 
-                <div class="mt-4 flex items-center justify-end">
+                <div class="mt-4 flex items-center justify-end" style="flex-direction: row; align-items: center;">
                     <Link
                         :href="route('login')"
                         class="already"
@@ -100,34 +106,60 @@ const submit = () => {
                         Already registered?
                     </Link>
 
-                    <PrimaryButton
-                        class="ms-4"
+                    <PrimaryButton class="button-container"
                         :class="{ 'opacity-25': form.processing }"
                         :disabled="form.processing"
                     >
                         Register
                     </PrimaryButton>
                 </div>
-            </form>
-        </div>
-        <img src="/img/login.png" alt="" class="banner">
+            </div>
+        </form>
     </GuestLayout>
 </template>
 
 <style>
-    .container {
+    form {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-evenly;
+        align-items: end;
         width: 100%;
-        gap:1rem;
+        max-width: 100%;
+        max-height: 100%;
     }
-    .banner {
+
+    #logo {
+        width: 3rem;
+        height: 3rem;
+        filter: invert(0.8);
+        margin-bottom: 5rem;
+    }
+
+    .form-container {
         width: 50%;
-        height: 100%;
-        object-fit: cover;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 5rem;
+        background-color: #fff;
+        box-sizing: border-box;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        z-index: 2;
     }
-    .already {
-        color: #666;
+
+    .form-container a, .form-container div {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .button-container {
+        margin: 1rem 0 1rem 1rem;
+    }
+
+    .img-container {
+        width: 50%;
+        height: 100vh;
+        box-sizing: border-box;
+        object-fit: cover;
     }
 </style>
