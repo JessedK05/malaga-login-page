@@ -33,8 +33,8 @@ const submit = () => {
     <GuestLayout style="width: 100%;">
         <Head title="Log in" />
 
-        <form @submit.prevent="submit" class="container">
-            <div class="form-container">
+        <form @submit.prevent="submit" class="login-container">
+            <div class="login-form-container">
                 <a href="/">
                     <img src="/img/openai-white-logomark.png" alt="" id="logo">
                 </a>
@@ -102,7 +102,7 @@ const submit = () => {
 </template>
 
 <style scoped>
-    form {
+    .login-container {
         display: flex;
         justify-content: space-evenly;
         align-items: start;
@@ -118,7 +118,7 @@ const submit = () => {
         margin-bottom: 5rem;
     }
 
-    .form-container {
+    .login-form-container {
         width: 50%;
         height: 100vh;
         margin: 0 auto;
