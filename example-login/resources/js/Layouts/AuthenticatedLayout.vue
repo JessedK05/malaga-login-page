@@ -14,7 +14,8 @@ const showingNavigationDropdown = ref(false);
     <div>
         <div class="min-h-screen bg-[#5a66a8]">
             <nav
-                class="border-b border-gray-100 bg-white"
+                class="border-b border-gray-100 bg-white shadow"
+                style="width: 100%; position: fixed; background-color: #fff; "
             >
                 <!-- Primary Navigation Menu -->
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -54,18 +55,7 @@ const showingNavigationDropdown = ref(false);
                                             >
                                                 {{ $page.props.auth.user.name }}
 
-                                                <svg
-                                                    class="-me-0.5 ms-2 h-4 w-4"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 20 20"
-                                                    fill="currentColor"
-                                                >
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                        clip-rule="evenodd"
-                                                    />
-                                                </svg>
+                                                <img src="/img/openai-white-logomark" alt="" style="filter: invert(0.8);">
                                             </button>
                                         </span>
                                     </template>

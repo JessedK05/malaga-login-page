@@ -21,93 +21,145 @@ const submit = () => {
 </script>
 
 <template>
-    <GuestLayout>
+    <GuestLayout style="width: 100%;">
         <Head title="Register" />
-
+        
         <form @submit.prevent="submit">
-            <div>
-                <InputLabel for="name" value="Name" />
+            <img src="/img/login.png" alt="" class="img-container">
+            <div class="form-container">
+                <a href="/">
+                    <img src="/img/openai-white-logomark.png" alt="" id="logo">
+                </a>
 
-                <TextInput
-                    id="name"
-                    type="text"
-                    class="mt-1 block w-full"
-                    v-model="form.name"
-                    required
-                    autofocus
-                    autocomplete="name"
-                />
+                <div  class="mt-4">
+                    <InputLabel for="name" value="Name" />
 
-                <InputError class="mt-2" :message="form.errors.name" />
-            </div>
+                    <TextInput
+                        id="name"
+                        type="text"
+                        class="mt-1 block w-full"
+                        v-model="form.name"
+                        required
+                        autofocus
+                        autocomplete="name"
+                    />
 
-            <div class="mt-4">
-                <InputLabel for="email" value="Email" />
+                    <InputError class="mt-2" :message="form.errors.name" />
+                </div>
 
-                <TextInput
-                    id="email"
-                    type="email"
-                    class="mt-1 block w-full"
-                    v-model="form.email"
-                    required
-                    autocomplete="username"
-                />
+                <div class="mt-4">
+                    <InputLabel for="email" value="Email" />
 
-                <InputError class="mt-2" :message="form.errors.email" />
-            </div>
+                    <TextInput
+                        id="email"
+                        type="email"
+                        class="mt-1 block w-full"
+                        v-model="form.email"
+                        required
+                        autocomplete="username"
+                    />
 
-            <div class="mt-4">
-                <InputLabel for="password" value="Password" />
+                    <InputError class="mt-2" :message="form.errors.email" />
+                </div>
 
-                <TextInput
-                    id="password"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password"
-                    required
-                    autocomplete="new-password"
-                />
+                <div class="mt-4">
+                    <InputLabel for="password" value="Password" />
 
-                <InputError class="mt-2" :message="form.errors.password" />
-            </div>
+                    <TextInput
+                        id="password"
+                        type="password"
+                        class="mt-1 block w-full"
+                        v-model="form.password"
+                        required
+                        autocomplete="new-password"
+                    />
 
-            <div class="mt-4">
-                <InputLabel
-                    for="password_confirmation"
-                    value="Confirm Password"
-                />
+                    <InputError class="mt-2" :message="form.errors.password" />
+                </div>
 
-                <TextInput
-                    id="password_confirmation"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password_confirmation"
-                    required
-                    autocomplete="new-password"
-                />
+                <div class="mt-4">
+                    <InputLabel
+                        for="password_confirmation"
+                        value="Confirm Password"
+                    />
 
-                <InputError
-                    class="mt-2"
-                    :message="form.errors.password_confirmation"
-                />
-            </div>
+                    <TextInput
+                        id="password_confirmation"
+                        type="password"
+                        class="mt-1 block w-full"
+                        v-model="form.password_confirmation"
+                        required
+                        autocomplete="new-password"
+                    />
 
-            <div class="mt-4 flex items-center justify-end">
-                <Link
-                    :href="route('login')"
-                    class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                    Already registered?
-                </Link>
+                    <InputError
+                        class="mt-2"
+                        :message="form.errors.password_confirmation"
+                    />
+                </div>
 
-                <PrimaryButton
-                    class="ms-4"
-                    :class="{ 'opacity-25': form.processing }"
-                    :disabled="form.processing"
-                >
-                    Register
-                </PrimaryButton>
+                <div class="mt-4 flex items-center justify-end" style="flex-direction: row; align-items: center;">
+                    <Link
+                        :href="route('login')"
+                        class="already"
+                    >
+                        Already registered?
+                    </Link>
+
+                    <PrimaryButton class="button-container"
+                        :class="{ 'opacity-25': form.processing }"
+                        :disabled="form.processing"
+                    >
+                        Register
+                    </PrimaryButton>
+                </div>
             </div>
         </form>
     </GuestLayout>
 </template>
+
+<style>
+    form {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: end;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #logo {
+        width: 3rem;
+        height: 3rem;
+        filter: invert(0.8);
+        margin-bottom: 5rem;
+    }
+
+    .form-container {
+        width: 50%;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 5rem;
+        background-color: #fff;
+        box-sizing: border-box;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    .form-container a, .form-container div {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .button-container {
+        margin: 1rem 0 1rem 1rem;
+    }
+
+    .img-container {
+        width: 50%;
+        height: 100vh;
+        box-sizing: border-box;
+        object-fit: cover;
+    }
+</style>
